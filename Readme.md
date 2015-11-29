@@ -11,7 +11,7 @@ centers worldwide. With enough sensors, a machine learning algorithm can be used
 to help predict weather in a certain area.
 
 ### Members
-Cem Ersoz
-Harvey Shi
-Sander Shi
+Cem Ersoz\\
+Harvey Shi\\
+Sander Shi\\
 Elias Lu
