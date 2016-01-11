@@ -1,13 +1,12 @@
-var data = {
-  // A labels array that can contain any sort of values
-  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-  // Our series array that contains series objects or in this case series data arrays
-  series: [
-    [5, 2, 4, 2, 0]
-  ]
-};
-
-// Create a new line chart object where as first parameter we pass in a selector
-// that is resolving to our chart container element. The Second parameter
-// is the actual data object.
-new Chartist.Line('.ct-chart', data);
+new Chartist.Line('#chart-pressure', {
+    labels: ['12:00AM', '4:00AM', '8:00AM', '12:00PM', '4:00PM', '8:00PM'],
+    series:[[10, 10, 20, 30, 50, 80]]
+});
+new Chartist.Line('#chart-temperature', {
+    labels: ['12:00AM', '4:00AM', '8:00AM', '12:00PM', '4:00PM', '8:00PM'],
+    series:[[22, 16, 18, 28, 26, 23]]
+});
+new Chartist.Line('#chart-humidity', {
+    labels: ['12:00AM', '4:00AM', '8:00AM', '12:00PM', '4:00PM', '8:00PM'],
+    series:[[21, 32, 56, 43, 78, 43]]
+});

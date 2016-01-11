@@ -12,6 +12,9 @@
     <link href="bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
 </head>
 <body>
+
+    <!--Navigation Bar-->
+    <div class="navbar-fixed">
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo">The Prophet</a>
@@ -31,6 +34,7 @@
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
   </nav>
+  </div>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
@@ -41,7 +45,7 @@
                 <h5 class="header col s12 light amber-text text-lighten-2">A local weather data collector and analyser.</h5>
             </div>
             <div class="row center">
-                <a href="#weather" id="download-button" class="btn-large waves-effect waves-light amber darken-2">Weather Data</a>
+                <a href="#weather" id="download-button" class="btn-large waves-effect waves-light amber darken-2">Weather Prediction</a>
             </div>
             <br><br>
 
@@ -51,15 +55,15 @@
   </div>
 
 
+  <a id="weather"></a>
   <div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
+      <!--   Weather Predection Section   -->
       <div class="row">
         <div class="col s12 m12">
           <div class="icon-block">
-            <br>
-            <a id="weather"></a>
+              <br><br>
             <h4 class="center">Weather Prediction</h4>
 
             <p class="light">Today's weather should be <b class="amber-text text-darken-2">SUNNY</b>, the highest temperature during the day is <b class="amber-text text-darken-2">68&deg;F</b>, 
@@ -72,6 +76,7 @@
     </div>
   </div>
 
+    <!--  Weather Data Transition  -->
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -84,54 +89,57 @@
     <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
+    <!--  Air Pressure  -->
+
   <div class="container">
     <div class="section">
 
+  <a id="pressure"></a>
       <div class="row">
-        <div class="col s12 center">
-          <a id="pressure"></a>
+        <div class="col s12 offset-m2 m8 center">
+          <br><br>
           <h4>Air Pressure</h4>
           <p class="left-align light">Stuff.</p>
-          <div class="ct-chart ct-perfect-fourth"></div>
-       <script>
-		var data = {
-			labels:['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-			series:[
-				[5, 2, 4, 2, 0]			
-			]
-		};
-		new Chartist.Line('.ct-chart', data);	
-	  </script>
+
+          <div id="chart-pressure" class="ct-chart ct-golden-section center"></div>
+        
         </div>
       </div>
-
     </div>
+  <a id="humidity"></a>
   </div>
   
+    <!--  Humidity  -->
+
   <div class="amber lighten-5">
   <div class="container">
     <div class="section">
 
       <div class="row">
-        <div class="col s12 center">
-          <a id="humidity"></a>
+        <div class="col s12 m8 offset-m2 center">
+          <br><br>
           <h4>Humidity</h4>
           <p class="left-align light">Stuff.</p>
+          <div id="chart-humidity" class="ct-chart ct-golden-section center"></div>
         </div>
       </div>
 
     </div>
   </div>
+  <a id="temperature"></a>
   </div>
+
+    <!--  Temperature  -->
 
   <div class="container">
     <div class="section">
 
       <div class="row">
-        <div class="col s12 center">
-          <a id="temperature"></a>
+        <div class="col s12 m8 offset-m2 center">
+          <br><br>
           <h4>Temperature</h4>
           <p class="left-align light">Stuff.</p>
+          <div id="chart-temperature" class="ct-chart ct-golden-section center"></div>
         </div>
       </div>
 
@@ -149,7 +157,7 @@
     </div>
     <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
   </div>
-
+  <!--Footer-->
   <footer class="page-footer amber darken-3">
     <div class="container">
       <div class="row">
@@ -172,7 +180,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="white-text" href="#">The Prophet</a>
+      Made by <a class="white-text" href="#">The Prophet</a> using Materialize and Chartist.
       </div>
     </div>
   </footer>
@@ -183,5 +191,6 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="bower_components/chartist/dist/chartist.min.js"></script>
+  <script src="js/myChart.js"></script>
   </body>
 </html>
