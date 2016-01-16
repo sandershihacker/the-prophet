@@ -8,17 +8,17 @@ query.first({
         var airPressure = object.get('airPressure');
         var temperature = object.get('temperature');
         alert("Humidity: " + humidity + "; Temperature: " + temperature + "Pressure: " + airPressure);
-	    new Chartist.Line('#chart-pressure', {
-	        labels: ['12:00AM', '4:00AM', '8:00AM', '12:00PM', '4:00PM', '8:00PM'],
-	        series:[[airPressure, 10, 20, 30, 50, 80]]
-	    });
 	    new Chartist.Line('#chart-temperature', {
-	        labels: ['12:00AM', '4:00AM', '8:00AM', '12:00PM', '4:00PM', '8:00PM'],
-	        series:[[temperature, 16, 18, 28, 26, 23]]
+          labels: ['16:15','16:00','15:47','15:25', '15:20', '14:47', '12:47', '10:47', '8:47'],
+	        series:[[77.7, 78.4, 77.19, 80, 79.5, 79.52, 83, 78, 81]]
+	    });
+	    new Chartist.Line('#chart-pressure', {
+          labels: ['16:15','16:00','15:47','15:25', '15:20', '14:47', '12:47', '10:47', '8:47'],
+	        series:[[38, 35, 0, 37, 42, 39, 31, 27, 35]]
 	    });
 	    new Chartist.Line('#chart-humidity', {
-	        labels: ['12:00AM', '4:00AM', '8:00AM', '12:00PM', '4:00PM', '8:00PM'],
-	        series:[[humidity, 32, 56, 43, 78, 43]]
+          labels: ['16:15','16:00','15:47','15:25', '15:20', '14:47', '12:47', '10:47', '8:47'],
+	        series:[[23.5, 34.7, 34.9, 34.4, 23.5, 21.0, 19.7, 23.5, 27]]
 	    });
     },
     error: function(error) {
